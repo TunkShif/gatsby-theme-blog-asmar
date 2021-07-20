@@ -1,0 +1,15 @@
+.nav-link {
+  @apply text-gray-800
+}
+
+.nav-link:focus, .nav-link:hover {
+  @apply text-yellow-800 underline transform scale-105 transition outline-none
+}
+
+.footer-link {
+  @apply text-gray-700
+}
+
+.footer-link:focus, .footer-link:hover {
+  @apply text-gray-500 underline outline-none
+}

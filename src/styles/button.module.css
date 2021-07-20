@@ -1,0 +1,7 @@
+.button {
+  @apply text-gray-800
+}
+
+.button:focus, .button:hover {
+  @apply text-gray-600 underline transform scale-105 transition outline-none
+}

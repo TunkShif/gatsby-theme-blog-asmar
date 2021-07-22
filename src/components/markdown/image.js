@@ -10,9 +10,11 @@ const Image = ({ src, alt, width, height }) => {
             alt={alt}
             width={width}
             height={height}
-            className="max-w-full rounded-md md:max-w-lg" />
+            className="max-w-full rounded-md md:max-w-md lg:max-w-lg" />
         </Zoom>
-      <figcaption className="mt-2 text-center">{alt}</figcaption>
+      <figcaption className="mt-2 text-center">
+        <a href={src}>{alt}</a>
+      </figcaption>
     </figure>
   )
 }

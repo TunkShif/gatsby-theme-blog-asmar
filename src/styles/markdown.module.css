@@ -42,16 +42,16 @@
   @apply bg-yellow-100 rounded-sm shadow-sm;
 }
 
-.markdown pre {
-  @apply my-4 p-4 overflow-x-auto bg-yellow-100 rounded-md shadow-md;
-}
-
-.markdown pre > code {
-  @apply bg-none rounded-none shadow-none;
-}
-
 .markdown blockquote {
   @apply pl-4 py-1 bg-yellow-100 border-l-4 border-yellow-200 rounded-r-md rounded-l-sm shadow-md;
+}
+
+.markdown a {
+  @apply text-yellow-800;
+}
+
+.markdown a:hover, .markdown a:focus {
+  @apply underline outline-none;
 }
 
 .markdown ol, .markdown ul {
@@ -75,7 +75,7 @@
 }
 
 .markdown table thead {
-  @apply bg-gray-300;
+  @apply bg-yellow-100;
 }
 
 .markdown table tbody tr:nth-child(odd) {
@@ -83,7 +83,7 @@
 }
 
 .markdown table tbody tr:nth-child(even) {
-  @apply bg-gray-100;
+  @apply bg-yellow-50;
 }
 
 .markdown table th, .markdown table td {
@@ -105,4 +105,8 @@
 
 .markdown sub, .markdown sup {
   @apply text-base;
+}
+
+.markdown figure a {
+  @apply text-gray-800;
 }

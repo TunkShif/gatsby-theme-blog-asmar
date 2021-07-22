@@ -5,10 +5,13 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from './layout'
 import Post from '../post'
 import Image from '../markdown/image'
+import Column from '../markdown/column'
+import { Pre } from '../markdown/code'
 import { markdown } from '../../styles/markdown.module.css'
 
 const components = {
-  Link, Image
+  pre: (props) => <Pre {...props.children.props} />,
+  Link, Image, Column
 }
 
 export default function ArticleLayout({ data: { mdx } }) {

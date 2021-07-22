@@ -1,0 +1,217 @@
+---
+title: The Markdown or MDX Guide
+date: 2021-07-22
+desc: "guide to markdown or mdx"
+tags: ["markdown", "guide"]
+---
+
+# Headings
+
+The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+# Paragraph
+
+Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
+
+Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
+
+# Typography
+
+| Inline    | Markdown | Text                   | In                | Table  |
+| --------- | -------- | ---------------------- | ----------------- | ------ |
+| _italics_ | **bold** | **_bold and italics_** | ~~strikethrough~~ | `code` |
+
+# Blockquotes
+
+The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element, and optionally with in-line changes such as annotations and abbreviations.
+
+## Blockquote without attribution
+
+> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+>
+> **Note** that you can use _Markdown syntax_ within a blockquote.
+
+## Blockquote with attribution
+
+> Don't communicate by sharing memory, share memory by communicating.
+>
+> — <cite>Rob Pike[^1]</cite>
+
+[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+
+# Code Blocks
+
+## Code block with backticks
+
+Syntax highlighting support powered by `Prism.js` & `prism-react-renderer`.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
+</html>
+```
+
+## Code block indented with four spaces
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Example HTML5 Document</title>
+    </head>
+    <body>
+      <p>Test</p>
+    </body>
+    </html>
+
+# List Types
+
+## Ordered List
+
+1. First item
+2. Second item
+3. Third item
+
+## Unordered List
+
+- List item
+- Another item
+- And another item
+
+## Nested list
+
+- Item
+  1. First Sub-item
+  2. Second Sub-item
+- Another Item
+- Other Items
+
+# Links and Pictures
+
+This is a [link][0] to other sites.
+
+## Image Component
+
+Use zoomable `Image` components in mdx to get better image display.
+
+Display the image in fullscreen by just clicking it.
+
+Click the image caption to get the origianl link.
+
+Powered by `react-medium-image-zoom`.
+
+```jsx
+// used just the same way as <img> tag
+<Image
+  src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress"
+  alt="serenity forest" />
+
+// optional props for width and height
+<Image
+  src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress"
+  alt="serenity forest"
+  width={1260}
+  height={750} />
+```
+
+<Image
+  src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress"
+  alt="serenity forest"
+  width={1260}
+  height={750} />
+
+## Tables
+
+GitHub flavor markdown tables aren't part of the core Markdown spec, but you can use it in mdx;
+
+| Name  | Age |   Country |
+| :---- | :-: | --------: |
+| Alice | 23  | Australia |
+| Grace | 21  |        UK |
+| Pablo | 27  |     Spain |
+| Alex  | 24  |    Canada |
+| Chris | 25  |        US |
+
+# Other Elements — `abbr`, `sub`, `sup`, `kbd`, `mark`
+
+<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
+
+H<sub>2</sub>O
+
+X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
+
+Press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd> to end the session.
+
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+## Extended Components
+
+### Column
+
+With `Column` component, you can simply create a two-column layout for your page.
+
+---
+
+<Column>
+<Image
+  src="https://images.pexels.com/photos/7245594/pexels-photo-7245594.jpeg"
+  alt="lemons"
+  width={400}
+  height={600} />
+
+<div>
+
+## Heading
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+</div>
+
+<div>
+
+## Another One
+
+Sed **ut** perspiciatis unde **omnis** iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+</div>
+
+<div>
+
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+---
+
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+</div>
+</Column>
+
+---
+
+However, this component can get ***messy*** when rendered in the page, take care when using it!
+
+For more information about extended components, check out <Link to="/post/extended-components">this post</Link>
+
+[0]: https:www.google.com
+[1]: https://github.com/TunkShif/gatsby-theme-blog-asmar

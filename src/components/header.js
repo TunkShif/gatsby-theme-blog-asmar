@@ -68,7 +68,7 @@ const Header = () => {
         </div>
       </div>
       <nav className="flex justify-around py-2 text-lg font-bold border-t-2 border-b-2 border-gray-200">
-        {navs.map(nav => <Link className={navLink} to={nav.link}>{nav.name.toUpperCase()}</Link>)}
+        {navs.map(nav => <Link key={nav.name} className={navLink} to={nav.link}>{nav.name.toUpperCase()}</Link>)}
       </nav>
     </header>
   )

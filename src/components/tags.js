@@ -9,7 +9,7 @@ const Tags = ({tags}) => {
       <div className="pr-2">
         <i className="fas fa-tag"></i>
       </div>
-      <div className="flex">
+      <div className="flex flex-wrap">
         {tags.map(tag =>
           <span key={tag} className={`${navLink} ${tagStyle} mr-1 font-medium`}>
             <Link to={`/tag/${tag}`}>{tag}</Link>

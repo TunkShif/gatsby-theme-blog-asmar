@@ -1,11 +1,9 @@
-import * as React from "react"
-import Layout from '../components/layout.js'
-import AllPosts from "../components/posts"
+import React from "react"
+import Layout from '../components/layouts/layout'
 
 const IndexPage = () => {
   return (
     <Layout title="Asmar" >
-      <AllPosts />
     </Layout>
   )
 }

@@ -8,11 +8,12 @@ Inspired by [hugo-ink][0].
 
 - [ ] Home Page
   - [x] Header
-- [ ] Posts Page
+- [x] Posts Page
   - [x] Post list
-  - [ ] Pagination
+  - [x] Pagination
 - [ ] Article Page
-  - [ ] Basic typography style
+  - [x] Basic typography style
+  - [x] Responsive images
   - [ ] Code highlighting
   - [ ] TOC support
   - [ ] Comment

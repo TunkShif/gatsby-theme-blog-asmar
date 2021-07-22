@@ -1,7 +1,7 @@
 .button {
-  @apply text-gray-800
+  @apply text-gray-800 transform transition duration-500 ease-in-out
 }
 
 .button:focus, .button:hover {
-  @apply text-gray-600 underline transform scale-105 transition outline-none
+  @apply text-gray-600 scale-110 outline-none
 }

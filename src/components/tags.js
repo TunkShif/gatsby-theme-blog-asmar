@@ -1,4 +1,5 @@
-import * as React from 'react'
+import { Link } from 'gatsby'
+import React from 'react'
 import { navLink } from '../styles/link.module.css'
 import { tag as tagStyle} from '../styles/tag.module.css'
 
@@ -9,8 +10,10 @@ const Tags = ({tags}) => {
         <i className="fas fa-tag"></i>
       </div>
       <div className="flex">
-        {tags.map(tag => 
-          <span className={`${navLink} ${tagStyle} mr-1 font-medium` }><a href="#">{tag}</a></span>)}
+        {tags.map(tag =>
+          <span key={tag} className={`${navLink} ${tagStyle} mr-1 font-medium`}>
+            <Link to={`/tag/${tag}`}>{tag}</Link>
+          </span>)}
       </div>
     </div>
   )

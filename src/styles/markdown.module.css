@@ -1,0 +1,108 @@
+.markdown {
+  @apply text-lg text-gray-800;
+}
+
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  @apply my-6 text-gray-900 font-bold;
+}
+
+.markdown h1:before, .markdown h2:before, .markdown h3:before, .markdown h4:before, .markdown h5:before, .markdown h6:before {
+  content: '# ';
+}
+
+.markdown h1 {
+  @apply text-4xl ;
+}
+
+.markdown h2 {
+  @apply text-3xl;
+}
+
+.markdown h3 {
+  @apply text-2xl;
+}
+
+.markdown h4 {
+  @apply text-xl;
+}
+
+.markdown h5 {
+  @apply text-lg;
+}
+
+.markdown h6 {
+  @apply text-base;
+}
+
+.markdown p {
+  @apply my-4 leading-loose;
+}
+
+.markdown code {
+  @apply bg-yellow-100 rounded-sm shadow-sm;
+}
+
+.markdown pre {
+  @apply my-4 p-4 overflow-x-auto bg-yellow-100 rounded-md shadow-md;
+}
+
+.markdown pre > code {
+  @apply bg-none rounded-none shadow-none;
+}
+
+.markdown blockquote {
+  @apply pl-4 py-1 bg-yellow-100 border-l-4 border-yellow-200 rounded-r-md rounded-l-sm shadow-md;
+}
+
+.markdown ol, .markdown ul {
+  @apply my-4 pl-4 list-inside;
+}
+
+.markdown ol {
+  @apply list-decimal;
+}
+
+.markdown ul {
+  @apply list-disc;
+}
+
+.markdown hr {
+  @apply border-0 border-t-2 border-gray-200;
+}
+
+.markdown table {
+  @apply block table-auto border-collapse overflow-x-auto;
+}
+
+.markdown table thead {
+  @apply bg-gray-300;
+}
+
+.markdown table tbody tr:nth-child(odd) {
+  @apply bg-white;
+}
+
+.markdown table tbody tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+
+.markdown table th, .markdown table td {
+  @apply px-4 py-2;
+}
+
+.markdown kbd {
+  background-color: hsla(0,0%,0%,0.04);
+  @apply p-1 font-semibold rounded-md shadow-sm;
+}
+
+.markdown mark {
+  @apply bg-yellow-200 rounded-sm;
+}
+
+.markdown abbr {
+  text-decoration-color: rgb(146, 64, 14);
+}
+
+.markdown sub, .markdown sup {
+  @apply text-base;
+}

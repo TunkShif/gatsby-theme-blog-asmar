@@ -18,14 +18,21 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Arvo`
+          `Arvo`, `Fira Code`
         ],
-        display: 'swap'
+        display: "swap"
       }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [],
+        remarkPlugins: [],
+      },
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-postcss",
+    "gatsby-awesome-pagination",
   ]
 }

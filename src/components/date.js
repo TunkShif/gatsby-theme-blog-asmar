@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 const DateTime = ({date}) => {
   const formatDate = ([ year, month, day ]) => {
@@ -13,9 +13,9 @@ const DateTime = ({date}) => {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-between pr-2 w-28 md:pr-4">
-        <time className="mb-2 text-3xl font-bold text-gray-800 md:text-3xl" dateTime={date}>{day}</time>
-        <time className="mt-2 text-lg font-medium text-gray-600 md:text-lg"  dateTime={date}>{month} {year}</time>
+      <div className="flex flex-col items-center justify-between mr-1 w-28 md:pr-4">
+        <time className="mb-4 text-4xl font-bold text-gray-800 md:mb-5 md:text-4xl" dateTime={date}>{day}</time>
+        <time className="mt-2 text-xl font-medium text-gray-600 md:mt-4 md:text-xl"  dateTime={date}>{month} {year}</time>
       </div>
     </div>
   )

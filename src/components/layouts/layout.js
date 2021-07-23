@@ -4,7 +4,7 @@ import Footer from '../footer.js'
 
 const Layout = ({ title, children }) => {
   return (
-    <main className="p-3 mx-auto md:p-10 md:w-2/3 lg:w-1/2">
+    <main className="p-3 mx-auto md:p-10 xl:w-1/2">
       <title>{title}</title>
       <Header />
       {children}

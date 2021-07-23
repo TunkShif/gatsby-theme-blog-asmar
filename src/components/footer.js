@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { footerLink } from '../styles/link.module.css'
 
 const Footer = () => {
-  const {site: {siteMetadata}} = useStaticQuery(graphql`
+  const { site: { siteMetadata } } = useStaticQuery(graphql`
     query SiteFooterInfoQuery {
       site {
         siteMetadata {
@@ -11,7 +11,8 @@ const Footer = () => {
           createDate
         }
       }
-    }`)
+    }
+  `)
 
   const copyright = `${siteMetadata.createDate} © Copyright ${siteMetadata.author}`
 

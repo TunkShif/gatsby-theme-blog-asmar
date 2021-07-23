@@ -1,18 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from './layout'
+import Heading from '../heading'
 import PostList from '../post-list'
 import Pagination from '../pagination'
 
 const PostsPage = ({data: {allMdx}, pageContext}) => {
   return (
     <Layout title="All Posts">
+      <Heading iconClass="fas fa-archive" title="All Posts" />
       <PostList posts={allMdx.nodes} />
       <Pagination
         current={pageContext.humanPageNumber}
         total={pageContext.numberOfPages}
         prev={pageContext.previousPagePath}
-        next={pageContext.nextPagePath}  />
+        next={pageContext.nextPagePath} />
     </Layout>
   )
 }

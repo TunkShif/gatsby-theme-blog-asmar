@@ -1,18 +1,8 @@
 import React from 'react'
-import { graphql, Link } from "gatsby"
-import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { graphql } from "gatsby"
 import Layout from './layout'
 import Post from '../post'
-import Image from '../markdown/image'
-import Column from '../markdown/column'
-import { Pre } from '../markdown/code'
-import { markdown } from '../../styles/markdown.module.css'
-
-const components = {
-  pre: (props) => <Pre {...props.children.props} />,
-  Link, Image, Column
-}
+import Markdown from '../markdown'
 
 export default function ArticleLayout({ data: { mdx } }) {
   return (
@@ -23,11 +13,7 @@ export default function ArticleLayout({ data: { mdx } }) {
         desc={mdx.frontmatter.desc}
         tags={mdx.frontmatter.tags}
         slug={`${mdx.slug}/#`} />
-      <MDXProvider components={components}>
-        <article className={`${markdown} mb-4`}>
-          <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
-        </article>
-      </MDXProvider>
+      <Markdown mdx={mdx} />
     </Layout>
   )
 }

@@ -24,9 +24,9 @@ Inspired by [hugo-ink][0].
   - [ ] TOC support
   - [ ] Comment
   - [ ] MathJax/Katex support
-- [ ] Tags Page
-- [ ] 404 Page
-- [ ] About Page
+- [x] Tags Page
+- [x 404 Page
+- [x] About Page
   - [ ] More custom stuff
   - [ ] Chart display
 - [ ] Dark mode

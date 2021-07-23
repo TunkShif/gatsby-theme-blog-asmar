@@ -5,6 +5,8 @@ desc: "guide to markdown or mdx"
 tags: ["markdown", "guide"]
 ---
 
+import Code from "../../src/components/markdown/code.js"
+
 # Headings
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
@@ -82,6 +84,27 @@ Syntax highlighting support powered by `Prism.js` & `prism-react-renderer`.
       <p>Test</p>
     </body>
     </html>
+
+## Show filename
+
+By adding prop `filename=name` after the language name, you'll get a tag displaying filename under the code block
+
+````markdown
+```python filename=hello.py
+def greet(name):
+  return f"Hello, {name}!"
+
+greet("Gatsby Blog")
+```
+````
+
+```python filename=hello.py
+def greet(name):
+  return f"Hello, {name}!"
+
+greet("Gatsby Blog")
+```
+
 
 # List Types
 

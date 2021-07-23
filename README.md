@@ -25,7 +25,7 @@ Inspired by [hugo-ink][0].
   - [ ] Comment
   - [ ] MathJax/Katex support
 - [x] Tags Page
-- [x 404 Page
+- [x] 404 Page
 - [x] About Page
   - [ ] More custom stuff
   - [ ] Chart display
@@ -44,5 +44,9 @@ yarn # install all dependencies
 yarn develop # run development server
 yarn build # build the site
 ```
+
+# Thanks
+
+- awesome free pictures and icons from [freepik.com](https://www.freepik.com/) and [flaticon.com](https://www.flaticon.com/)
 
 [0]: https://github.com/knadh/hugo-ink

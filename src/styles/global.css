@@ -3,5 +3,5 @@ body {
 }
 
 ::selection {
-  @apply bg-yellow-100;
+  @apply bg-yellow-200;
 }

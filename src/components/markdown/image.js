@@ -1,7 +1,7 @@
 import React from 'react'
 import Zoom from 'react-medium-image-zoom'
 
-const Image = ({ src, alt, width, height }) => {
+const Image = ({ src, alt, width, height, url }) => {
   return (
     <figure className="flex flex-col items-center justify-center my-4">
         <Zoom >
@@ -13,7 +13,7 @@ const Image = ({ src, alt, width, height }) => {
             className="max-w-full rounded-md md:max-w-md lg:max-w-lg" />
         </Zoom>
       <figcaption className="mt-2 text-center">
-        <a href={src}>{alt}</a>
+        <a href={url === undefined ? src : url}>{alt}</a>
       </figcaption>
     </figure>
   )

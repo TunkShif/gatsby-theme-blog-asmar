@@ -78,6 +78,8 @@ Use zoomable `Image` components in mdx to get better image display.
 
 Display the image in fullscreen by just clicking it. Click the image caption to get the origianl link.
 
+Also you can pass a `url` prop to the component, then click the caption text will direct to this url.
+
 Powered by `react-medium-image-zoom`.
 
 ```jsx
@@ -153,7 +155,7 @@ And, be **sure** to leave an empty line after the opening tag (`<div>`) and befo
 
 By default, the `Column` component won't show double column layout in mobile screen, but you can pass a `mobile` prop to the component to enable it.
 
-The implementation of the `Column` component can be found [here][1].
+The implementation of the `Column` component can be found [here][2].
 
 ```jsx
 <Column mobile={true}>
@@ -201,3 +203,4 @@ Neque porro quisquam est, **qui** dolorem ipsum quia dolor sit amet, consectetur
 
 [0]: https://reactjs.org/docs/introducing-jsx.html
 [1]: https://mdxjs.com/
+[2]: https://github.com/TunkShif/gatsby-theme-blog-asmar/blob/master/src/components/markdown/column.js

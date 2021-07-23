@@ -108,5 +108,5 @@
 }
 
 .markdown figure a {
-  @apply text-gray-800;
+  @apply text-gray-600;
 }

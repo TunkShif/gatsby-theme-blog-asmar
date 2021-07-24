@@ -18,7 +18,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Arvo`, `Fira Code`
+          `Arvo`, `Fira Code`, `Noto Serif SC`
         ],
         display: "swap"
       }

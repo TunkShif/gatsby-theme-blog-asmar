@@ -24,7 +24,7 @@ export default function ArticleLayout({ data: { mdx } }) {
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }, headings: {elemMatch: {depth: {lte: 5}}}) {
+    mdx(id: { eq: $id }) {
       body
       slug
       headings {

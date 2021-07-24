@@ -1,15 +1,15 @@
 ---
-title: Extended Components for MDX
-date: 2021-07-22
-desc: "guide to extended components for mdx"
+title: MDX 扩展组件
+date: 2021-07-23
+desc: "MDX 扩展组件指南"
 tags: ["markdown", "guide"]
 ---
 
-# An Introduction to MDX
+# 什么是 MDX
 
-If you've ever used `React.js`, you must know what `JSX` is. It is a syntax extension to JavaScript, which allows you to write HTML tags in JavaScript.
+曾经写过 `React` 的同学一定对 `JSX` 非常熟悉。`JSX` 是对 JavaScript 语法的扩展，使得我们能直接在 JS 里面写类似 HTML 元素的标签。
 
-To know more about JSX, check out [React docs][0]!
+想要了解更多关于 JSX 的知识，可以到 [React 官方文档][0] 查看。
 
 ```jsx
 const title = <h1>Hello, JSX!</h1>
@@ -25,9 +25,9 @@ const Page = (props) => {
 }
 ```
 
-Similarly, MDX is a syntax extension for markdown, which allows you to use JSX in markdown!
+类似地，MDX 是对 Markdown 语法的扩展，使得我们能够直接在 Markdown 里面写 JSX！
 
-So you can just import React components in MDX file and then use them.
+因此我们可以直接在 MDX 文件里面导入任何 React 组件，然后直接使用。
 
 ```jsx
 import { Chart } from '../components/chart'
@@ -39,17 +39,17 @@ The chart is rendered inside our MDX document.
 <Chart />
 ```
 
-To know more about MDX, check out its [Homepage][1].
+想要了解更多关于 MDX 的知识，请到它的[主页][1]查看更多信息。
 
-## A Starter MDX Template for Blog Post
+## 用于博客文章的 MDX 初始模板
 
-The first couple of lines of the mdx file is a section called `frontmatter`. It is used for page metadata and it is written in YAML syntax.
+在 MDX 文件的顶部有一块被分割线划分出来的区域，叫做 `frontmatter`，用于存储该页面的一些数据，用 YAML 语法书写。
 
-Be sure to fill in all those fields. And if you don't want any tags, just leave an empty array here. Do **NOT** just delete the `tags` field, or it will cause problems when rendering the page.
+确保每篇博客文章的开头都有以下的字段。如果你不想要写标签（tag）的话，在对应的字段留一个空列表就可以了，**不要**直接将该字段删除掉，否则在生成页面时会发生解析错误。
 
-Below the `frontmatter` section, you can import any installed React components you wan to use in the page.
+在 `frontmatter` 栏的下面，你可以用 `import` 语法导入任何你想要在该页面里使用的 React 组件。
 
-Please be **sure** to always add an empty line between two elements to avoid any potential markdown parsing related issues.
+最好确保将 Markdown 的各个元素之间用一空行分割开，以避免潜在的解析错误。
 
 ```jsx
 ---
@@ -70,15 +70,15 @@ Use imported components if you want.
 <Chart />
 ```
 
-Some components are auto imported for all mdx files. All those available components will be listed below in this post. You don't need to import these components before using it.
+部分常用的组件已经自动导入，不需要再自己手动 `import` 便可以使用。可用的组件列表如下：
 
 ## Image
 
-Use zoomable `Image` components in mdx to get a better image display.
+`Image` 组件提供了一个带有图片标注信息以及可以全屏缩放的图片展示。
 
-Show the image in fullscreen by just clicking it. Click the image caption to direct to the origianl link.
+点击图片以全屏展示，点击图片下方的标注信息跳转到图片原始链接。
 
-Also you can pass a `url` prop to the component, then click the caption text will direct to this url.
+另外你也可以给该组件传递一个 `url` 属性，然后点击图片标注信息就会直接跳转到该链接。
 
 Powered by `react-medium-image-zoom`.
 
@@ -105,7 +105,7 @@ Powered by `react-medium-image-zoom`.
 
 ## Column
 
-With `Column` component, you can simply create a two-column layout in your post page.
+使用 `Column` 组件快速创建一个双栏页面布局。
 
 ---
 
@@ -147,15 +147,15 @@ Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit la
 
 ---
 
-However, this component can get ***messy*** in certain sizes of screen, take care when using it!
+不过在有时候 `Column` 组件的展示效果不是很好，使用的时候需要自己注意。
 
-All components inside the `Column` must be `block` element, if you want to write markdown inside it, **wrap** it with a `div` tag.
+`Column` 组件内部传入的必须全部都是块级的元素，如果你想在里面写 Markdown 的话，**注意**要把 Markdown 文本用 `div` 表情包裹起来。
 
-And, be **sure** to leave an empty line after the opening tag (`<div>`) as shown below. Otherwise, the first line inside the `div` tag won't be rendered as markdown.
+另外，记得要像下面的例子演示的一样，在 `<div>` 起始标签之后留一空行，否则第一行的内容不会被解析为 Markdown。
 
-By default, the `Column` component won't show double column layout in mobile screen, but you can pass a `mobile` prop to the component to enable it.
+`Column` 组件默认在移动端不会以双栏的布局展示，但是你可以传递一个 `mobile` 属性，让它在移动端页面上也以双栏的形式展示。
 
-The implementation of the `Column` component can be found [here][2].
+该组件的具体实现可以在[这里][2]查看。
 
 ```jsx
 <Column mobile={true}>
@@ -179,7 +179,7 @@ Neque porro quisquam est, **qui** dolorem ipsum quia dolor sit amet, consectetur
 </Column>
 ```
 
-Below is an example of still showing two columns when in mobile screen.
+下面是一个在移动端也会以双栏布局展示的例子。
 
 <Column mobile={true}>
 <Image

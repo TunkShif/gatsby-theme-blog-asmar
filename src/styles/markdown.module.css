@@ -112,5 +112,13 @@
 }
 
 .markdown pre::-webkit-scrollbar-thumb, .markdown table::-webkit-scrollbar-thumb {
-  @apply rounded-md;
+  @apply bg-transparent rounded-md;
+}
+
+.markdown pre:hover::-webkit-scrollbar-thumb, .markdown table:hover::-webkit-scrollbar-thumb {
+  @apply bg-yellow-200;
+}
+
+.markdown pre::-webkit-scrollbar-thumb:hover, .markdown table::-webkit-scrollbar-thumb:hover {
+  @apply bg-yellow-100;
 }

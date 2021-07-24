@@ -26,7 +26,8 @@ Inspired by [hugo-ink][0].
     - [ ] Details (transition, animation)
   - [x] Scroll to top button
   - [ ] Comment
-  - [ ] MathJax/Katex support
+  - [x] MathJax/**Katex** support
+    - [ ] Click to copy
 - [x] Tags Page
 - [x] 404 Page
 - [x] About Page

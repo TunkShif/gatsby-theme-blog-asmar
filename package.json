@@ -28,13 +28,17 @@
     "gatsby-plugin-postcss": "^4.9.0",
     "gatsby-plugin-sharp": "^3.9.0",
     "gatsby-remark-autolink-headers": "^4.7.0",
+    "gatsby-remark-katex": "^5.7.0",
     "gatsby-source-filesystem": "^3.9.0",
+    "gatsby-transformer-remark": "^4.7.0",
+    "katex": "^0.13.13",
     "postcss": "^8.3.5",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-medium-image-zoom": "^4.3.4",
     "react-responsive": "^8.2.0",
+    "remark-math": "3",
     "tailwindcss": "^2.2.4"
   }
 }

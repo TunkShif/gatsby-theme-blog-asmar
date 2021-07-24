@@ -27,9 +27,16 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`
+            }
+          },
           "gatsby-remark-autolink-headers"
         ],
         remarkPlugins: [
+          require('remark-math')
         ],
       },
     },
@@ -49,6 +56,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-postcss",
     "gatsby-awesome-pagination",
-    "gatsby-remark-autolink-headers"
+    "gatsby-remark-autolink-headers",
   ]
 }

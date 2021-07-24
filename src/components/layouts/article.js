@@ -5,6 +5,7 @@ import Post from '../post'
 import Markdown from '../markdown'
 import ToC from '../toc'
 import ScrollButton from '../scroll-button'
+import 'katex/dist/katex.min.css'
 
 export default function ArticleLayout({ data: { mdx } }) {
   return (

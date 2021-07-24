@@ -15,7 +15,7 @@ const components = {
 const Markdown = ({mdx}) => {
   return (
       <MDXProvider components={components}>
-        <article className={`${markdown} mb-4`}>
+        <article id="markdown" className={`${markdown} mb-4`}>
           <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
         </article>
       </MDXProvider>

@@ -4,7 +4,7 @@ import Layout from '../components/layouts/layout'
 
 const IndexPage = () => {
   return (
-    <Layout title="Asmar" >
+    <Layout title="Homepage" >
       <p className="p-10 text-4xl text-center">
         NOT DONE YET : 3
       </p>

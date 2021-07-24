@@ -21,7 +21,9 @@ Inspired by [hugo-ink][0].
   - [x] Code highlighting
     - [ ] Click to copy
     - [ ] More language support
-  - [ ] TOC support
+  - [x] TOC support
+    - [ ] Details (transition, animation)
+  - [x] Scroll to top button
   - [ ] Comment
   - [ ] MathJax/Katex support
 - [x] Tags Page

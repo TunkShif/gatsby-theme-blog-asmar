@@ -26,13 +26,29 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        gatsbyRemarkPlugins: [],
-        remarkPlugins: [],
+        gatsbyRemarkPlugins: [
+          "gatsby-remark-autolink-headers"
+        ],
+        remarkPlugins: [
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Blog Asmar`,
+        short_name: `Asmar`,
+        icon: "src/assets/images/avatar.svg",
+        start_url: `/`,
+        background_color: `#F9FAFB`,
+        theme_color: `#92400E`,
+        display: `standalone`,
       },
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-postcss",
     "gatsby-awesome-pagination",
+    "gatsby-remark-autolink-headers"
   ]
 }

@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import Layout from './layout'
 import Post from '../post'
 import Markdown from '../markdown'
+import ToC from '../toc'
+import ScrollButton from '../scroll-button'
 
 export default function ArticleLayout({ data: { mdx } }) {
   return (
@@ -13,16 +15,22 @@ export default function ArticleLayout({ data: { mdx } }) {
         desc={mdx.frontmatter.desc}
         tags={mdx.frontmatter.tags}
         slug={`${mdx.slug}/#`} />
+      <ToC headings={mdx.headings} />
       <Markdown mdx={mdx} />
+      <ScrollButton />
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
+    mdx(id: { eq: $id }, headings: {elemMatch: {depth: {lte: 5}}}) {
       body
       slug
+      headings {
+        depth
+        value
+      }
       frontmatter {
         title
         tags

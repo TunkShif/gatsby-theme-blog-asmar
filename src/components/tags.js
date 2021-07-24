@@ -5,7 +5,7 @@ import { tag as tagStyle} from '../styles/tag.module.css'
 
 const Tags = ({tags}) => {
   return (
-    <div className="flex items-center justify-start py-1 text-lg text-gray-700">
+    <div className="flex items-center justify-start py-1 text-base text-gray-700 md:text-lg">
       <div className="pr-2 hover:animate-bounce focus:animate-bounce hover:text-yellow-900 focus:text-yellow-900">
         <i className="fas fa-tag"></i>
       </div>

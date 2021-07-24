@@ -1,0 +1,7 @@
+.image figcaption a {
+  @apply text-gray-400 transition duration-300 ease-in-out;
+}
+
+.image figcaption a:hover, .image figcaption a:focus {
+  @apply text-gray-600 no-underline;
+}

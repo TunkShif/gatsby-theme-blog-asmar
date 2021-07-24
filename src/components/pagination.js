@@ -4,7 +4,7 @@ import { navLink } from '../styles/link.module.css'
 
 const Pagination = ({current, total, prev, next}) => {
   return (
-    <div className="flex items-center justify-end py-2 text-2xl">
+    <div className="flex items-center justify-end py-2 text-xl md:text-2xl">
       {prev &&
         <Link to={prev} className={`${navLink} font-bold`}>
           <i className="fas fa-long-arrow-alt-left"></i>

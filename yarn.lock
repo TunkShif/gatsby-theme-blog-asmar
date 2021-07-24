@@ -1037,7 +1037,7 @@
     core-js-pure "^3.15.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.1.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.14.6":
   version "7.14.8"
   resolved "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.14.8.tgz?cache=0&sync_timestamp=1626804296663&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.14.8.tgz#7119a56f421018852694290b9f9148097391b446"
   integrity sha1-cRmlb0IQGIUmlCkLn5FICXORtEY=
@@ -1772,16 +1772,6 @@
   integrity sha1-tKkUu2LnwnLU5Zif5EQPgSqx2Ac=
   dependencies:
     defer-to-connect "^2.0.0"
-
-"@tailwindcss/typography@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.nlark.com/@tailwindcss/typography/download/@tailwindcss/typography-0.4.1.tgz#51ddbceea6a0ee9902c649dbe58871c81a831212"
-  integrity sha1-Ud287qag7pkCxknb5YhxyBqDEhI=
-  dependencies:
-    lodash.castarray "^4.4.0"
-    lodash.isplainobject "^4.0.6"
-    lodash.merge "^4.6.2"
-    lodash.uniq "^4.5.0"
 
 "@tokenizer/token@^0.1.1":
   version "0.1.1"
@@ -4056,6 +4046,11 @@ css-loader@^5.0.1:
     schema-utils "^3.0.0"
     semver "^7.3.5"
 
+css-mediaquery@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.nlark.com/css-mediaquery/download/css-mediaquery-0.1.2.tgz#6a2c37344928618631c54bd33cedd301da18bea0"
+  integrity sha1-aiw3NEkoYYYxxUvTPO3TAdoYvqA=
+
 css-minimizer-webpack-plugin@^2.0.0:
   version "2.0.0"
   resolved "https://registry.nlark.com/css-minimizer-webpack-plugin/download/css-minimizer-webpack-plugin-2.0.0.tgz#3c42f6624ed4cf4780dd963e23ee649e5a25c1a8"
@@ -5994,6 +5989,20 @@ gatsby-cli@^3.9.0:
     yoga-layout-prebuilt "^1.9.6"
     yurnalist "^2.1.0"
 
+gatsby-core-utils@^2.10.0:
+  version "2.10.0"
+  resolved "https://registry.nlark.com/gatsby-core-utils/download/gatsby-core-utils-2.10.0.tgz?cache=0&sync_timestamp=1626957477676&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fgatsby-core-utils%2Fdownload%2Fgatsby-core-utils-2.10.0.tgz#bc37ea9eb6bb5f327aa4bdc0345a37d9390d4a7a"
+  integrity sha1-vDfqnra7XzJ6pL3ANFo32TkNSno=
+  dependencies:
+    ci-info "2.0.0"
+    configstore "^5.0.1"
+    file-type "^16.2.0"
+    fs-extra "^8.1.0"
+    node-object-hash "^2.0.0"
+    proper-lockfile "^4.1.1"
+    tmp "^0.2.1"
+    xdg-basedir "^4.0.0"
+
 gatsby-core-utils@^2.9.0:
   version "2.9.0"
   resolved "https://registry.nlark.com/gatsby-core-utils/download/gatsby-core-utils-2.9.0.tgz?cache=0&sync_timestamp=1626405809424&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fgatsby-core-utils%2Fdownload%2Fgatsby-core-utils-2.9.0.tgz#f1ba30dfa687bdd2c1c5106d29e6491e5376e8c5"
@@ -6067,6 +6076,17 @@ gatsby-plugin-image@^1.9.0:
     gatsby-core-utils "^2.9.0"
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
+
+gatsby-plugin-manifest@^3.10.0:
+  version "3.10.0"
+  resolved "https://registry.nlark.com/gatsby-plugin-manifest/download/gatsby-plugin-manifest-3.10.0.tgz#87ce4383b938b06a9346610b9e4bd0cccd72c15a"
+  integrity sha1-h85Dg7k4sGqTRmELnkvQzM1ywVo=
+  dependencies:
+    "@babel/runtime" "^7.14.6"
+    gatsby-core-utils "^2.10.0"
+    gatsby-plugin-utils "^1.10.0"
+    semver "^7.3.5"
+    sharp "^0.28.3"
 
 gatsby-plugin-mdx@^2.9.0:
   version "2.9.0"
@@ -6173,6 +6193,13 @@ gatsby-plugin-typescript@^3.9.0:
     "@babel/runtime" "^7.14.0"
     babel-plugin-remove-graphql-queries "^3.9.0"
 
+gatsby-plugin-utils@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.nlark.com/gatsby-plugin-utils/download/gatsby-plugin-utils-1.10.0.tgz#88ca8a1d63be68ebdd65af83046c0f2fa011f725"
+  integrity sha1-iMqKHWO+aOvdZa+DBGwPL6AR9yU=
+  dependencies:
+    joi "^17.2.1"
+
 gatsby-plugin-utils@^1.9.0:
   version "1.9.0"
   resolved "https://registry.nlark.com/gatsby-plugin-utils/download/gatsby-plugin-utils-1.9.0.tgz#c7b124525486f56d4ccc5f78047f5b0fcb4521a7"
@@ -6250,6 +6277,17 @@ gatsby-recipes@^0.20.0:
     ws "^7.3.0"
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
+
+gatsby-remark-autolink-headers@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.nlark.com/gatsby-remark-autolink-headers/download/gatsby-remark-autolink-headers-4.7.0.tgz#d9ec2b106d88dfdf350f5019da62c1b8959baacc"
+  integrity sha1-2ewrEG2I3981D1AZ2mLBuJWbqsw=
+  dependencies:
+    "@babel/runtime" "^7.14.6"
+    github-slugger "^1.3.0"
+    lodash "^4.17.21"
+    mdast-util-to-string "^2.0.0"
+    unist-util-visit "^2.0.3"
 
 gatsby-source-filesystem@^3.9.0:
   version "3.9.0"
@@ -6558,7 +6596,7 @@ github-from-package@0.0.0:
   resolved "https://registry.nlark.com/github-from-package/download/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
   integrity sha1-l/tdlr/eiXMxPyDoKI75oWf6ZM4=
 
-github-slugger@^1.2.1:
+github-slugger@^1.2.1, github-slugger@^1.3.0:
   version "1.3.0"
   resolved "https://registry.nlark.com/github-slugger/download/github-slugger-1.3.0.tgz#9bd0a95c5efdfc46005e82a906ef8e2a059124c9"
   integrity sha1-m9CpXF79/EYAXoKpBu+OKgWRJMk=
@@ -7233,7 +7271,7 @@ human-signals@^1.1.1:
   resolved "https://registry.nlark.com/human-signals/download/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha1-xbHNFPUK6uCatsWf5jujOV/k36M=
 
-hyphenate-style-name@^1.0.2:
+hyphenate-style-name@^1.0.0, hyphenate-style-name@^1.0.2:
   version "1.0.4"
   resolved "https://registry.nlark.com/hyphenate-style-name/download/hyphenate-style-name-1.0.4.tgz#691879af8e220aea5750e8827db4ef62a54e361d"
   integrity sha1-aRh5r44iCupXUOiCfbTvYqVONh0=
@@ -8392,11 +8430,6 @@ lodash.bind@^4.1.4:
   resolved "https://registry.nlark.com/lodash.bind/download/lodash.bind-4.2.1.tgz#7ae3017e939622ac31b7d7d7dcb1b34db1690d35"
   integrity sha1-euMBfpOWIqwxt9fX3LGzTbFpDTU=
 
-lodash.castarray@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.nlark.com/lodash.castarray/download/lodash.castarray-4.4.0.tgz#c02513515e309daddd4c24c60cfddcf5976d9115"
-  integrity sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=
-
 lodash.clonedeep@4.5.0, lodash.clonedeep@^4.5.0:
   version "4.5.0"
   resolved "https://registry.nlark.com/lodash.clonedeep/download/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
@@ -8693,6 +8726,13 @@ markdown-table@^2.0.0:
   integrity sha1-GUqQztJtMf51PYuUNEMCFMARhls=
   dependencies:
     repeat-string "^1.0.0"
+
+matchmediaquery@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.nlark.com/matchmediaquery/download/matchmediaquery-0.3.1.tgz#8247edc47e499ebb7c58f62a9ff9ccf5b815c6d7"
+  integrity sha1-gkftxH5Jnrt8WPYqn/nM9bgVxtc=
+  dependencies:
+    css-mediaquery "^0.1.2"
 
 md5-file@^5.0.0:
   version "5.0.0"
@@ -10971,6 +11011,16 @@ react-refresh@^0.9.0:
   resolved "https://registry.nlark.com/react-refresh/download/react-refresh-0.9.0.tgz#71863337adc3e5c2f8a6bfddd12ae3bfe32aafbf"
   integrity sha1-cYYzN63D5cL4pr/d0Srjv+Mqr78=
 
+react-responsive@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.nlark.com/react-responsive/download/react-responsive-8.2.0.tgz#e0ffb306cfd8f38c9c12e26725b9e1245fa9debc"
+  integrity sha1-4P+zBs/Y84ycEuJnJbnhJF+p3rw=
+  dependencies:
+    hyphenate-style-name "^1.0.0"
+    matchmediaquery "^0.3.0"
+    prop-types "^15.6.1"
+    shallow-equal "^1.1.0"
+
 react-universal-interface@^0.6.2:
   version "0.6.2"
   resolved "https://registry.nlark.com/react-universal-interface/download/react-universal-interface-0.6.2.tgz#5e8d438a01729a4dbbcbeeceb0b86be146fe2b3b"
@@ -11842,7 +11892,12 @@ shallow-compare@^1.2.2:
   resolved "https://registry.nlark.com/shallow-compare/download/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha1-+keUYnv0VaR8T1aIHYphMtWB/9s=
 
-sharp@^0.28.0:
+shallow-equal@^1.1.0:
+  version "1.2.1"
+  resolved "https://registry.nlark.com/shallow-equal/download/shallow-equal-1.2.1.tgz#4c16abfa56043aa20d050324efa68940b0da79da"
+  integrity sha1-TBar+lYEOqINBQMk76aJQLDaedo=
+
+sharp@^0.28.0, sharp@^0.28.3:
   version "0.28.3"
   resolved "https://registry.nlark.com/sharp/download/sharp-0.28.3.tgz#ecd74cefd020bee4891bb137c9850ee2ce277a8b"
   integrity sha1-7NdM79AgvuSJG7E3yYUO4s4neos=
@@ -13366,7 +13421,7 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
+unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.nlark.com/unist-util-visit/download/unist-util-visit-2.0.3.tgz#c3703893146df47203bb8a9795af47d7b971208c"
   integrity sha1-w3A4kxRt9HIDu4qXla9H17lxIIw=

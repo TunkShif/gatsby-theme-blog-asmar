@@ -1,0 +1,46 @@
+.toc::-webkit-scrollbar {
+  @apply h-auto w-1;
+}
+
+.toc::-webkit-scrollbar-track {
+  @apply shadow-sm rounded-sm;
+}
+
+.toc::-webkit-scrollbar-thumb {
+  @apply bg-transparent;
+}
+
+.toc:hover::-webkit-scrollbar-thumb {
+  @apply bg-gray-200 rounded-sm;
+}
+
+.toc a {
+  @apply transition duration-300 ease-in-out;
+}
+
+.toc a:before {
+ content: '# ';
+}
+
+.toc details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.toc details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/**
+ * Thanks for the awesome animation from:
+ * https://stackoverflow.com/questions/38213329/how-to-add-css3-transition-with-html5-details-summary-tag-reveal
+ */
+
+.toc details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; transform: translateY(-10px)}
+  100%  {opacity: 1; transform: translateX(0)}
+}

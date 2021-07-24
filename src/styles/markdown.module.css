@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg text-gray-800;
+  @apply text-base md:text-lg text-gray-800;
 }
 
 .markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .markdown h6 {
@@ -107,6 +107,10 @@
   @apply text-base;
 }
 
-.markdown figure a {
-  @apply text-gray-600;
+.markdown pre::-webkit-scrollbar, .markdown table::-webkit-scrollbar {
+  @apply w-auto h-1;
+}
+
+.markdown pre::-webkit-scrollbar-thumb, .markdown table::-webkit-scrollbar-thumb {
+  @apply rounded-md;
 }

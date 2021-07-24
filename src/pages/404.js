@@ -1,6 +1,6 @@
-import React from "react"
-import Layout from "../components/layouts/layout"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import Layout from '../components/layouts/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const NotFoundPage = () => {
   return (

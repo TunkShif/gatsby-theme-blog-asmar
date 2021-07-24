@@ -1,4 +1,5 @@
 import React from 'react'
+import Heading from './heading'
 import Post from './post'
 
 const PostList = ({posts}) => {
@@ -12,6 +13,9 @@ const PostList = ({posts}) => {
               desc={post.frontmatter.desc}
               tags={post.frontmatter.tags} />
       )}
+      {posts.length === 0 &&
+        <Heading iconClass="far fa-sad-tear" title="No posts yet..." />
+      }
     </div>
   )
 }

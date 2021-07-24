@@ -17,7 +17,7 @@ const Footer = () => {
   const copyright = `${siteMetadata.createDate} © Copyright ${siteMetadata.author}`
 
   return(
-    <footer className="flex flex-wrap justify-end pt-4 text-gray-700 border-t-2 border-gray-200 text-md">
+    <footer className="flex flex-wrap justify-end pt-4 text-base text-gray-700 border-t-2 border-gray-200">
       <p>{copyright}</p>
       <p className="hidden md:block md:mx-2">{" | "}</p>
       <p>

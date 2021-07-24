@@ -1,16 +1,17 @@
-# Gatsby Blog Asmar Theme [WIP]
+# Gatsby Blog Asmar Theme
 
 ![homepage-desktop](docs/img/desktop.png)
 
-A work-in-progress gatsby blog theme.
+[DEMO][1]
+
+A minimal gatsby blog theme.
 
 Inspired by [hugo-ink][0].
 
 # TODO
 
-- [ ] Home Page
+- [x] Home Page
   - [x] Header
-  - [ ] Dashboard
 - [x] Posts Page
   - [x] Post list
   - [x] Pagination
@@ -36,6 +37,8 @@ Inspired by [hugo-ink][0].
 - [ ] Tweet-like or weibo-like short post
 - [ ] Gallery component
 - [ ] Command for creating new post template
+- [ ] i18n support
+- [ ] Docs for basic usage and advanced custom
 
 # Development
 
@@ -52,3 +55,4 @@ yarn build # build the site
 - awesome free pictures and icons from [freepik.com](https://www.freepik.com/) and [flaticon.com](https://www.flaticon.com/)
 
 [0]: https://github.com/knadh/hugo-ink
+[1]: https://gatsbythemeblogasmardemo.gatsbyjs.io/

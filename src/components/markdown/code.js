@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
+import Prism from 'prism-react-renderer/prism'
 import theme from 'prism-react-renderer/themes/github'
 
 const Code = ({ code, language, filename }) => {
+  useEffect(() => {
+    (typeof global !== "undefined" ? global : window).Prism = Prism
+
+    const languages = [
+      "kotlin", "csharp", "elixir", "clojure", "erlang"
+    ]
+
+    languages.forEach(lang => require(`prismjs/components/prism-${lang}`))
+  })
+
   return (
     <Highlight {...defaultProps} theme={theme} code={code} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (

@@ -11265,6 +11265,11 @@ prism-react-renderer@^1.2.1:
   resolved "https://registry.nlark.com/prism-react-renderer/download/prism-react-renderer-1.2.1.tgz#392460acf63540960e5e3caa699d851264e99b89"
   integrity sha1-OSRgrPY1QJYOXjyqaZ2FEmTpm4k=
 
+prismjs@^1.24.1:
+  version "1.24.1"
+  resolved "https://registry.nlark.com/prismjs/download/prismjs-1.24.1.tgz#c4d7895c4d6500289482fa8936d9cdd192684036"
+  integrity sha1-xNeJXE1lACiUgvqJNtnN0ZJoQDY=
+
 probe-image-size@^6.0.0:
   version "6.0.0"
   resolved "https://registry.nlark.com/probe-image-size/download/probe-image-size-6.0.0.tgz#4a85b19d5af4e29a8de7d53a9aa036f6fd02f5f4"

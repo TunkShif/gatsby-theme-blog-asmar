@@ -6,7 +6,6 @@ import PostList from '../post-list'
 import Pagination from '../pagination'
 
 const TagPage = ({data: {allMdx}, pageContext}) => {
-  console.log(pageContext)
   return (
     <Layout title={`${pageContext.tag} - All Posts`}>
       <Heading iconClass="fas fa-tag" title={`${pageContext.tag}`} />

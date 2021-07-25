@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import Image from '../markdown/image'
 
@@ -24,15 +24,24 @@ const RandomKittyPic = () => {
 
   const random = (max) => Math.floor(Math.random() * (max))
 
-  const isDesktop = useMediaQuery({ minWidth: 1024 })
+  const [source, setSource] = useState(pics.desktop[random(pics.desktop.length - 1)])
+  const [size, setSize] = useState({width: 300, height: 500})
+
+  useMediaQuery({ minWidth: 1024 }, undefined, (matches) => {
+    if (matches) {
+      setSource(pics.desktop[random(pics.desktop.length - 1)])
+      setSize({width: 300, height: 500})
+    } else {
+      setSource(pics.mobile[random(pics.mobile.length - 1)])
+      setSize({width: "", height: ""})
+    }
+  })
 
   return (
     <Image
-      src={
-        isDesktop ? pics.desktop[random(pics.desktop.length - 1)] : pics.mobile[random(pics.mobile.length - 1)]
-      }
-      width={isDesktop ? 300 : ''}
-      height={isDesktop ? 500 : ''}
+      src={source}
+      width={size.width}
+      height={size.height}
       alt="un gato" />
   )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import Slugger from 'github-slugger'
 import { toc } from '../styles/toc.module.css'
 
 /**
@@ -11,7 +12,7 @@ import { toc } from '../styles/toc.module.css'
 
 const ToC = ({ headings }) => {
 
-  const toKebabCase = str => str.replace(/\s+/g, "-").toLowerCase()
+  const slugger = new Slugger()
 
   const breakpoints = useBreakpoint()
 
@@ -50,14 +51,14 @@ const ToC = ({ headings }) => {
           <ul>
             {headings.filter(h => h.depth <= 5)
               .map(({ depth, value }) => {
-                const id = toKebabCase(value)
+                const id = slugger.slug(value)
                 const margins = {
                   1: "", 2: "ml-2", 3: "ml-4", 4: "ml-6", 5: "ml-8"
                 }
                 return (
                   <li key={id} className="my-2">
                     <a
-                      href={id}
+                      href={`#${id}`}
                       className={`${id === activeId ? 'text-gray-800 font-bold' : ''} ${margins[depth]} hover:underline hover:text-gray-800`}
                       onClick={e => {
                         e.preventDefault()

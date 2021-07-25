@@ -3,7 +3,7 @@
   cursor: pointer;
 }
 
-.admontion details > summary::-webkit-details-marker {
+.admonition details > summary::-webkit-details-marker {
   display: none;
 }
 

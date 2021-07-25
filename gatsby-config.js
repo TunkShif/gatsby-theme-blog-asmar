@@ -57,5 +57,6 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-awesome-pagination",
     "gatsby-remark-autolink-headers",
+    "gatsby-plugin-breakpoints"
   ]
 }

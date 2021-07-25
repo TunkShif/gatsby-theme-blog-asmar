@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { useMediaQuery } from 'react-responsive'
+import React from 'react'
 import Image from '../markdown/image'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 
 const RandomKittyPic = () => {
   const pics = {
@@ -24,25 +24,25 @@ const RandomKittyPic = () => {
 
   const random = (max) => Math.floor(Math.random() * (max))
 
-  const [source, setSource] = useState(pics.desktop[random(pics.desktop.length - 1)])
-  const [size, setSize] = useState({width: 300, height: 500})
+  const randomDesktopPic = pics.desktop[random(pics.desktop.length - 1)]
+  const randomMobilePic = pics.mobile[random(pics.mobile.length - 1)]
 
-  useMediaQuery({ minWidth: 1024 }, undefined, (matches) => {
-    if (matches) {
-      setSource(pics.desktop[random(pics.desktop.length - 1)])
-      setSize({width: 300, height: 500})
-    } else {
-      setSource(pics.mobile[random(pics.mobile.length - 1)])
-      setSize({width: "", height: ""})
-    }
-  })
+  const breakpoints = useBreakpoint()
 
   return (
-    <Image
-      src={source}
-      width={size.width}
-      height={size.height}
-      alt="un gato" />
+    <div>
+      {!breakpoints.md ?
+        <Image
+          src={randomDesktopPic}
+          width="300"
+          height="500"
+          alt="un gato" />
+        :
+        <Image
+          src={randomMobilePic}
+          alt="un gato" />
+      }
+    </div>
   )
 }
 

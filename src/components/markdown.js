@@ -5,11 +5,12 @@ import { Link } from "gatsby"
 import Image from './markdown/image'
 import Column from './markdown/column'
 import { Pre } from './markdown/code'
+import Admonition from './markdown/admonition'
 import { markdown } from '../styles/markdown.module.css'
 
 const components = {
   pre: (props) => <Pre {...props.children.props} />,
-  Link, Image, Column
+  Link, Image, Column, Admonition
 }
 
 const Markdown = ({mdx}) => {

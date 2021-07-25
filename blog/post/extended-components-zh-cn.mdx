@@ -201,6 +201,51 @@ Neque porro quisquam est, **qui** dolorem ipsum quia dolor sit amet, consectetur
 </div>
 </Column>
 
+## Admonition
+
+有四种类型的展示横幅组件可以使用，分别是 `info`, `important`, `tip` 和 `warning`。
+
+默认横幅是关闭状态的，可以传入一个 `open` 参数使它默认展开。
+
+```jsx
+<Admonition type="info" title="Title">
+
+You can use *Markdown* syntax inside **it**.
+
+</Admonition>
+```
+
+<Admonition type="info" title="信息">
+
+**info** type admonition
+
+</Admonition>
+
+
+<Admonition type="important" title="重要">
+
+**important** type admonition
+
+</Admonition>
+
+<Admonition type="tip" title="提示">
+
+**tip** type admonition
+
+</Admonition>
+
+<Admonition type="warning" title="警告">
+
+**warning** type admonition
+
+</Admonition>
+
+<Admonition type="INFO" title="默认展开" open>
+
+**info** type admonition open by default
+
+</Admonition>
+
 [0]: https://reactjs.org/docs/introducing-jsx.html
 [1]: https://mdxjs.com/
 [2]: https://github.com/TunkShif/gatsby-theme-blog-asmar/blob/master/src/components/markdown/column.js

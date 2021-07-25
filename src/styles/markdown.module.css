@@ -47,11 +47,16 @@
 }
 
 .markdown a {
-  @apply text-yellow-800;
+  @apply text-yellow-800 border-b-4 border-yellow-400;
 }
 
 .markdown a:hover, .markdown a:focus {
-  @apply underline outline-none;
+  @apply text-yellow-700 border-yellow-300 outline-none;
+}
+
+/* clear autolink anchor border */
+.markdown h1 > a, .markdown h2 > a, .markdown h3 > a, .markdown h4 > a, .markdown h5 > a, .markdown h6 > a {
+  @apply border-none;
 }
 
 .markdown ol, .markdown ul {

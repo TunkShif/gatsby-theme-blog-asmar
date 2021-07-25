@@ -13,7 +13,7 @@ const ToC = ({ headings }) => {
 
   const toKebabCase = str => str.replace(/\s+/g, "-").toLowerCase()
 
-  const isMobile = useMediaQuery({ minWidth: 1024 })
+  const isDesktop = useMediaQuery({ minWidth: 1024 })
 
   const [activeId, setActiveId] = useState()
 
@@ -38,7 +38,7 @@ const ToC = ({ headings }) => {
   return (
     <nav className={`${toc} xl:fixed xl:left-6 xl:inset-y-0 xl:py-4 xl:pr-2 xl:w-80 xl:h-full xl:text-gray-400 xl:text-lg xl:overflow-y-auto`}>
       {headings.length !== 0 &&
-        <details open={isMobile ? true : false}>
+        <details open={isDesktop ? true : false}>
           <summary>
             <div className="flex items-baseline justify-start pb-4 mb-4 text-xl text-gray-800 border-b-2 border-gray-300 md:text-2xl">
               <i className="mr-2 fas fa-caret-right"></i>

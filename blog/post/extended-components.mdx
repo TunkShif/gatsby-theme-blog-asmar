@@ -201,6 +201,51 @@ Neque porro quisquam est, **qui** dolorem ipsum quia dolor sit amet, consectetur
 </div>
 </Column>
 
+## Admonition
+
+There're four types of admonition components, including `info`, `important`, `tip` and `warning`.
+
+The admonition is collapsed by default, you can pass an `open` prop to make it open by default.
+
+```jsx
+<Admonition type="info" title="Title">
+
+You can use *Markdown* syntax inside **it**.
+
+</Admonition>
+```
+
+<Admonition type="info" title="INFO">
+
+**info** type admonition
+
+</Admonition>
+
+
+<Admonition type="important" title="IMPORTANT">
+
+**important** type admonition
+
+</Admonition>
+
+<Admonition type="tip" title="TIP">
+
+**tip** type admonition
+
+</Admonition>
+
+<Admonition type="warning" title="WARNING">
+
+**warning** type admonition
+
+</Admonition>
+
+<Admonition type="INFO" title="OPEN BY DEFAULT" open>
+
+**info** type admonition open by default
+
+</Admonition>
+
 [0]: https://reactjs.org/docs/introducing-jsx.html
 [1]: https://mdxjs.com/
 [2]: https://github.com/TunkShif/gatsby-theme-blog-asmar/blob/master/src/components/markdown/column.js
